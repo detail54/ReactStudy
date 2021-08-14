@@ -1,9 +1,9 @@
 import React, { useState, useRef, useCallback } from 'react'
 import TodoInsert from './TodoInsert';
-import Todolist from './Todolist';
+import TodoList from './TodoList';
 import TodoTemplate from './TodoTemplate';
 
-const Todoindex = () => {
+const TodoIndex = () => {
   const [ todos , setTodos ] = useState([
     {
       id: 1,
@@ -37,13 +37,22 @@ const Todoindex = () => {
     [todos]
   );
 
+  const onRemove = useCallback(
+    id => {
+      setTodos(todos.filter(todo => todo.id !== id));
+    },
+    [todos]
+  );
 
   return (
-    <TodoTemplate>
-      <TodoInsert onInsert={onInsert}/>
-      <Todolist todos={todos}/>
-    </TodoTemplate>
+    <>
+      <TodoTemplate>
+        <TodoInsert onInsert={onInsert} />
+        <TodoList todos={todos} onRemove={onRemove} />
+      </TodoTemplate>
+    </>
   )
-}
+  
+};
 
-export default Todoindex
+export default TodoIndex

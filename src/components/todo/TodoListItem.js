@@ -3,9 +3,9 @@ import { MdCheckBoxOutlineBlank, MdRemoveCircleOutline, MdCheckBox } from 'react
 import './style/TodoListItemStyle.scss';
 import cn from 'classnames';
 
-const TodoListItem = ( {todo} ) => {
+const TodoListItem = ({todo, onRemove}) => {
 
-  const { text, checked } = todo;
+  const { id, text, checked } = todo;
 
   return (
     <>
@@ -14,7 +14,7 @@ const TodoListItem = ( {todo} ) => {
           {checked ? <MdCheckBox/> : <MdCheckBoxOutlineBlank />}  
           <div className='text'>{text}</div>
         </div>  
-        <div className='remove'>
+        <div className='remove' onClick={() => onRemove(id)}>
           <MdRemoveCircleOutline />
         </div>
       </div>         
