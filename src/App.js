@@ -1,10 +1,16 @@
 import React from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link, NavLink, Route, Switch } from "react-router-dom";
 import HistoryTutoIndex from "./components/historytutorial/HistoryTutoIndex";
 import RouterTutorialIndex from "./components/routertutorial/RouterTutorialIndex";
 import TodoIndex from './components/todo/TodoIndex';
 
 const App = () => {
+
+  const activeStyleProps = {
+    background: 'black',
+    color: 'white'
+  }
+
   return (
     <>
       <ul>
@@ -12,10 +18,10 @@ const App = () => {
           <Link to="/">홈</Link>
         </li>
         <li>
-          <Link to="/todo">일정관리</Link>
+          <NavLink activeStyle={activeStyleProps} to="/todo">일정관리</NavLink>
         </li>
         <li>
-          <Link to="/history">히스토리</Link>
+          <NavLink activeStyle={activeStyleProps} to="/history">히스토리</NavLink>
         </li>
       </ul>
       <hr />
