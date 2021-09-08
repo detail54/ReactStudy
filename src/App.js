@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 import HistoryTutoIndex from "./components/historytutorial/HistoryTutoIndex";
 import RouterTutorialIndex from "./components/routertutorial/RouterTutorialIndex";
 import TodoIndex from './components/todo/TodoIndex';
@@ -19,9 +19,19 @@ const App = () => {
         </li>
       </ul>
       <hr />
-      <Route path="/" component={RouterTutorialIndex} exact={true}/>
-      <Route path="/todo" component={TodoIndex} />
-      <Route path="/history" component={HistoryTutoIndex} />
+      <Switch>
+        <Route path="/" component={RouterTutorialIndex} exact={true}/>
+        <Route path="/todo" component={TodoIndex} />
+        <Route path="/history" component={HistoryTutoIndex} />
+        <Route
+          render={({ location }) => (
+            <div>
+              <h2>이 페이지는 존재하지 않습니다.</h2>
+              <p>{location.pathname}</p>
+            </div>
+          )}
+        />
+      </Switch>
     </>
   )
 };
