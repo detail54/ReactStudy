@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import ColorContext from '../../store/color';
+import ColorContext from '../../context/color';
 
 const ColorBox = () => {
 

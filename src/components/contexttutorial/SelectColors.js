@@ -1,5 +1,5 @@
 import React from 'react'
-import { ColorConsumer } from '../../store/color';
+import { ColorConsumer } from '../../context/color';
 
 
 const colors = [ 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet' ];
