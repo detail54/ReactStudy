@@ -18,6 +18,5 @@
   : eslint-plugin-prettier@4.0.0 과 eslint@7.11.0 호환되지 않아 발생. (CRA는 7.11.0 버전)<br>
   -> 해결 : yarn upgrade -R eslint => react-scripts의 ESLint에 대한 종속성을 업데이트
 
-- 여러 프로젝트 패키지들을 하나의 디렉터리에서 관리하여
-  .eslintrc > project의 tsconfig.json을 root경로로 설정해 놓으면 서버 실행은 되나, 코드작성시 import문에서 경로를 읽어오지 못하여 error발생.<br>
+- 여러 프로젝트 패키지들을 하나의 디렉터리에서 관리하여 .eslintrc > project의 tsconfig.json을 root경로로 설정해 놓으면 서버 실행은 되나, 코드작성시 import문에서 경로를 읽어오지 못하여 error발생.<br>
   -> 추후 각 프로젝트별로 개별로 관리하게되면 error 발생하지 않음.
