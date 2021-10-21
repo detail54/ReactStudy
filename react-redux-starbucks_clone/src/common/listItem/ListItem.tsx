@@ -1,14 +1,42 @@
 import React from 'react'
-import ListItemView from './ListItemView'
+import { DefaultTheme, ThemedCssFunction } from 'styled-components'
+import { ListItemStyles } from './ListItem.styles'
 
-interface IProps {
+type Size = 'small' | 'medium' | 'large'
+type Align = 'left' | 'center' | 'right'
+
+export interface IProps {
   item: string
+  width?: string
+  background?: string
+  fontSize?: string
+  size?: Size
+  align?: Align
+  margin?: string
+  style?: ThemedCssFunction<DefaultTheme>
 }
 
 const listItem: React.FC<IProps> = (props) => {
-  const { item } = props
+  const {
+    item,
+    width = '',
+    background = '',
+    fontSize = '',
+    size = '',
+    align = '',
+    margin = '',
+  } = props
 
-  return <ListItemView item={item} />
+  const styleProps = {
+    width,
+    background,
+    fontSize,
+    size,
+    align,
+    margin,
+  }
+
+  return <ListItemStyles.Div {...styleProps}>{item}</ListItemStyles.Div>
 }
 
 export default listItem
