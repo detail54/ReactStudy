@@ -20,7 +20,6 @@
     },
     "ecmaVersion": 2021,
     "sourceType": "module", // import 사용
-    // "project": "./react-redux-starbucks_clone/tsconfig.json"
     "project": "./tsconfig.json"
   },
   "rules": {
@@ -28,6 +27,7 @@
     "react/jsx-filename-extension": [
       1,
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-    ]
+    ],
+    "import/prefer-default-export": "off" // import, export rules 비활성화
   }
 }
