@@ -8,7 +8,11 @@ interface IProps {
 const MenuView: React.FC<IProps> = (props) => {
   const { list } = props
 
-  return <MenuStyles.Menu>{list}</MenuStyles.Menu>
+  return (
+    <MenuStyles.Menu>
+      <MenuStyles.MainMenu>{list}</MenuStyles.MainMenu>
+    </MenuStyles.Menu>
+  )
 }
 
 export default MenuView

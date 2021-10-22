@@ -14,7 +14,7 @@ const Div = styled.div`
   width: ${(props: IProps) => props.width || '200px'};
   background: ${(props: IProps) => props.background || 'white'};
   margin: ${(props: IProps) => props.margin || '0px'};
-  font-size: ${(props: IProps) => props.fontSize || '16px'};
+  font-size: ${(props: IProps) => props.fontSize || '0px'};
 
   ${(props: IProps) =>
     (props.size === 'small' &&
