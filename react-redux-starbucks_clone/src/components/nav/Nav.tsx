@@ -13,7 +13,7 @@ const Nav: React.FC = () => {
     } else if (searchVisit && searchText === '') {
       setSearchVisit(false)
     } else {
-      console.log(searchText)
+      alert(searchText)
     }
   }
 
@@ -25,14 +25,14 @@ const Nav: React.FC = () => {
     <ListItem
       key={nav.id}
       item={nav.menuName}
-      fontSize='13px'
+      itemFontSize='13px'
       align='center'
-      height='56px'
+      itemHeight='56px'
       alignItems='top'
       padding='10px 25px 0px 25px'
       hoverColor='#669900'
       hoverBgColor='#2C2A29'
-      cursor='pointer'
+      itemCursor='pointer'
       hoverTextDeco='underline'
     />
   ))
@@ -41,13 +41,13 @@ const Nav: React.FC = () => {
     <ListItem
       key={nav.id}
       item={nav.menuName}
-      fontSize='13px'
+      itemFontSize='13px'
       padding='10px 15px'
       margin='9px 0px'
       align='center'
-      height='20px'
+      itemHeight='20px'
       hoverTextDeco='underline'
-      cursor='pointer'
+      itemCursor='pointer'
     />
   ))
 

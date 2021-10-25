@@ -5,18 +5,18 @@ type Size = 'small' | 'medium' | 'large'
 type Align = 'left' | 'center' | 'right'
 
 interface IProps {
-  width?: string
-  height?: string
-  color?: string
-  background?: string
-  fontSize?: string
-  fontWeight?: string
+  itemWidth?: string
+  itemHeight?: string
+  itemFontColor?: string
+  itemBackground?: string
+  itemFontSize?: string
+  itemFontWeight?: string
   size?: Size
   align?: Align
   margin?: string
   padding?: string
   alignItems?: string
-  cursor?: string
+  itemCursor?: string
   hoverColor?: string
   hoverBgColor?: string
   hoverTextDeco?: string
@@ -28,18 +28,18 @@ interface IProps {
 
 const listItem: React.FC<IProps> = (props) => {
   const {
-    width,
-    height,
-    color,
-    background,
-    fontSize,
-    fontWeight,
+    itemWidth,
+    itemHeight,
+    itemFontColor,
+    itemBackground,
+    itemFontSize,
+    itemFontWeight,
     size,
     align,
     margin,
     padding,
     alignItems,
-    cursor,
+    itemCursor,
     hoverColor,
     hoverBgColor,
     hoverTextDeco,
@@ -49,18 +49,18 @@ const listItem: React.FC<IProps> = (props) => {
   } = props
 
   const styleProps = {
-    width,
-    height,
-    color,
-    background,
-    fontSize,
-    fontWeight,
+    itemWidth,
+    itemHeight,
+    itemFontColor,
+    itemBackground,
+    itemFontSize,
+    itemFontWeight,
     size,
     align,
     margin,
     padding,
     alignItems,
-    cursor,
+    itemCursor,
     hoverColor,
     hoverBgColor,
     hoverTextDeco,
