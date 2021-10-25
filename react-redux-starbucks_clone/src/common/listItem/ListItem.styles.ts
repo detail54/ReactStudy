@@ -53,6 +53,7 @@ const Div = styled.div`
   padding: ${(props: IProps) => props.padding || ''};
   cursor: ${(props: IProps) => props.cursor || ''};
   font-weight: ${(props: IProps) => props.fontWeight || ''};
+  font-weight: lighter;
 
   &:hover {
     color: ${(props: IProps) => props.hoverColor || ''};
