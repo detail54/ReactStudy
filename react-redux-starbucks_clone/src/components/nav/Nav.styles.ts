@@ -76,7 +76,6 @@ const SearchInput = styled.input`
   padding: ${(props: { visit: boolean }) => (props.visit ? '0px 10px' : '0px')};
   border: none;
   transition: 1s;
-}
 `
 
 const Searchicon = styled.div`
