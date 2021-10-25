@@ -1,4 +1,4 @@
-import styled, { css, DefaultTheme, ThemedCssFunction } from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export interface IProps {
   width?: string
@@ -7,7 +7,6 @@ export interface IProps {
   size?: string
   align?: string
   margin?: string
-  style?: ThemedCssFunction<DefaultTheme>
 }
 
 const Div = styled.div`
@@ -52,12 +51,6 @@ const Div = styled.div`
         justify-content: center;
         align-items: right;
       `)}
-
-  ${(props: IProps) =>
-    props.style &&
-    css`
-        props.style
-    `}
 `
 
 export const ListItemStyles = {

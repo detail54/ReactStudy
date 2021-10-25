@@ -1,5 +1,4 @@
 import React from 'react'
-import { DefaultTheme, ThemedCssFunction } from 'styled-components'
 import { ListItemStyles } from './ListItem.styles'
 
 type Size = 'small' | 'medium' | 'large'
@@ -13,7 +12,8 @@ export interface IProps {
   size?: Size
   align?: Align
   margin?: string
-  style?: ThemedCssFunction<DefaultTheme>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  style?: any // 인라인 스타일 적용을 위한 props. 사용 지양
 }
 
 const listItem: React.FC<IProps> = (props) => {
@@ -25,6 +25,7 @@ const listItem: React.FC<IProps> = (props) => {
     size = '',
     align = '',
     margin = '',
+    style = {},
   } = props
 
   const styleProps = {
@@ -34,6 +35,7 @@ const listItem: React.FC<IProps> = (props) => {
     size,
     align,
     margin,
+    style,
   }
 
   return <ListItemStyles.Div {...styleProps}>{item}</ListItemStyles.Div>
