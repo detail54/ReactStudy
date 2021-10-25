@@ -1,15 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavView from './NavView'
 import { navNameList } from '../../config/navNames'
 import ListItem from '../../common/listItem/ListItem'
 
 const Nav: React.FC = () => {
+  const [searchVisit, setSearchVisit] = useState(false)
+  const [searchText, setSearchText] = useState('')
+
+  const onSearch = () => {
+    if (!searchVisit) {
+      setSearchVisit(true)
+    } else if (searchVisit && searchText === '') {
+      setSearchVisit(false)
+    } else {
+      console.log(searchText)
+    }
+  }
+
+  const onChangeSearch = (text: string) => {
+    setSearchText(text)
+  }
+
   const mainnNavList = navNameList.mainNavNames.map((nav) => (
     <ListItem
       key={nav.id}
       item={nav.menuName}
       fontSize='13px'
-      fontWeight='lighter'
       align='center'
       height='56px'
       alignItems='top'
@@ -35,7 +51,15 @@ const Nav: React.FC = () => {
     />
   ))
 
-  return <NavView mainList={mainnNavList} subNavList={subNavList} />
+  return (
+    <NavView
+      mainList={mainnNavList}
+      subNavList={subNavList}
+      onChangeSearch={onChangeSearch}
+      onSearch={onSearch}
+      searchVisit={searchVisit}
+    />
+  )
 }
 
 export default Nav

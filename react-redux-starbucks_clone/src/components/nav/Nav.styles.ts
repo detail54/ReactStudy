@@ -60,7 +60,6 @@ const SubNav = styled.div`
 `
 
 const SearchBox = styled.div`
-  width: 182px;
   height: 34px;
   display: flex;
   justify-content: center;
@@ -71,11 +70,13 @@ const SearchBox = styled.div`
 `
 
 const SearchInput = styled.input`
-  width: 123px;
+  width: ${(props: { visit: boolean }) => (props.visit ? '123px' : '0px')};
   height: 22px;
   font-size: 12px;
-  padding: 0px 10px;
+  padding: ${(props: { visit: boolean }) => (props.visit ? '0px 10px' : '0px')};
   border: none;
+  transition: 1s;
+}
 `
 
 const Searchicon = styled.div`

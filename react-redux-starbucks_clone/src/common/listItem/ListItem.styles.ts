@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export interface IProps {
+interface IProps {
   width?: string
   height?: string
   color?: string

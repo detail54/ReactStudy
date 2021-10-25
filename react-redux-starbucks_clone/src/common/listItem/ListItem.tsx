@@ -4,7 +4,7 @@ import { ListItemStyles } from './ListItem.styles'
 type Size = 'small' | 'medium' | 'large'
 type Align = 'left' | 'center' | 'right'
 
-export interface IProps {
+interface IProps {
   width?: string
   height?: string
   color?: string
