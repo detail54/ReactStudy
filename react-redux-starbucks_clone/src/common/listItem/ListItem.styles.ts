@@ -2,18 +2,22 @@ import styled, { css } from 'styled-components'
 
 export interface IProps {
   width?: string
+  color?: string
   background?: string
   fontSize?: string
   size?: string
   align?: string
   margin?: string
+  padding?: string
 }
 
 const Div = styled.div`
   width: ${(props: IProps) => props.width || '200px'};
+  color: ${(props: IProps) => props.color || 'black'};
   background: ${(props: IProps) => props.background || 'white'};
-  margin: ${(props: IProps) => props.margin || '0px'};
   font-size: ${(props: IProps) => props.fontSize || '0px'};
+  margin: ${(props: IProps) => props.margin || '0px'};
+  padding: ${(props: IProps) => props.padding || '0px'};
 
   ${(props: IProps) =>
     (props.size === 'small' &&
