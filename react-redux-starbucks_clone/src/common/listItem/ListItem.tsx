@@ -6,14 +6,20 @@ type Align = 'left' | 'center' | 'right'
 
 export interface IProps {
   width?: string
+  height?: string
   color?: string
   background?: string
   fontSize?: string
+  fontWeight?: string
   size?: Size
   align?: Align
   margin?: string
   padding?: string
   alignItems?: string
+  cursor?: string
+  hoverColor?: string
+  hoverBgColor?: string
+  hoverTextDeco?: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   style?: any // 인라인 스타일 적용을 위한 props. 사용 지양
   item: string
@@ -22,15 +28,21 @@ export interface IProps {
 
 const listItem: React.FC<IProps> = (props) => {
   const {
-    width = '',
-    color = '',
-    background = '',
-    fontSize = '',
-    size = '',
-    align = '',
-    margin = '',
-    padding = '',
+    width,
+    height,
+    color,
+    background,
+    fontSize,
+    fontWeight,
+    size,
+    align,
+    margin,
+    padding,
     alignItems,
+    cursor,
+    hoverColor,
+    hoverBgColor,
+    hoverTextDeco,
     style = {},
     item,
     onClick,
@@ -38,14 +50,20 @@ const listItem: React.FC<IProps> = (props) => {
 
   const styleProps = {
     width,
+    height,
     color,
     background,
     fontSize,
+    fontWeight,
     size,
     align,
     margin,
     padding,
     alignItems,
+    cursor,
+    hoverColor,
+    hoverBgColor,
+    hoverTextDeco,
     style,
     onClick,
   }

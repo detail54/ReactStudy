@@ -3,7 +3,11 @@ import './App.css'
 import Nav from './components/nav/Nav'
 
 const App: React.FC = () => {
-  return <Nav />
+  return (
+    <>
+      <Nav />
+    </>
+  )
 }
 
 export default App

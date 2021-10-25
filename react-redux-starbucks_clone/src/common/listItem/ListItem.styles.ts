@@ -6,22 +6,19 @@ export interface IProps {
   color?: string
   background?: string
   fontSize?: string
+  fontWeight?: string
   size?: string
   align?: string
   margin?: string
   padding?: string
   alignItems?: string
+  cursor?: string
+  hoverColor?: string
+  hoverBgColor?: string
+  hoverTextDeco?: string
 }
 
 const Div = styled.div`
-  width: ${(props: IProps) => props.width || '150px'};
-  height: ${(props: IProps) => props.height || '40px'};
-  color: ${(props: IProps) => props.color || 'black'};
-  background: ${(props: IProps) => props.background || 'white'};
-  font-size: ${(props: IProps) => props.fontSize || '0px'};
-  margin: ${(props: IProps) => props.margin || '0px'};
-  padding: ${(props: IProps) => props.padding || '0px'};
-
   ${(props: IProps) =>
     (props.size === 'small' &&
       css`
@@ -46,6 +43,22 @@ const Div = styled.div`
       justify-content: ${props.align || 'center'};
       align-items: ${props.alignItems || 'center'};
     `}
+
+  width: ${(props: IProps) => props.width || ''};
+  height: ${(props: IProps) => props.height || ''};
+  color: ${(props: IProps) => props.color || ''};
+  background: ${(props: IProps) => props.background || ''};
+  font-size: ${(props: IProps) => props.fontSize || ''};
+  margin: ${(props: IProps) => props.margin || ''};
+  padding: ${(props: IProps) => props.padding || ''};
+  cursor: ${(props: IProps) => props.cursor || ''};
+  font-weight: ${(props: IProps) => props.fontWeight || ''};
+
+  &:hover {
+    color: ${(props: IProps) => props.hoverColor || ''};
+    background: ${(props: IProps) => props.hoverBgColor || ''};
+    text-decoration: ${(props: IProps) => props.hoverTextDeco || ''};
+  }
 `
 
 export const ListItemStyles = {
