@@ -1,5 +1,5 @@
 import React from 'react'
-import { MenuStyles } from './Menu.styles'
+import { NavStyles } from './Nav.styles'
 
 interface IProps {
   list: JSX.Element[]
@@ -9,9 +9,9 @@ const MenuView: React.FC<IProps> = (props) => {
   const { list } = props
 
   return (
-    <MenuStyles.Menu>
-      <MenuStyles.MainMenu>{list}</MenuStyles.MainMenu>
-    </MenuStyles.Menu>
+    <NavStyles.Nav>
+      <NavStyles.MainNav>{list}</NavStyles.MainNav>
+    </NavStyles.Nav>
   )
 }
 

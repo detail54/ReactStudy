@@ -1,4 +1,4 @@
-export type IMenuListItem = {
+export type INavListItem = {
   id: string
   menuName: string
 }

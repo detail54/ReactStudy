@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-const Menu = styled.section`
+const Nav = styled.section`
   width: 100%;
   background: green;
 `
 
-const MainMenu = styled.div`
+const MainNav = styled.div`
   width: 2000px;
   background: yellow;
   display: flex;
@@ -13,7 +13,7 @@ const MainMenu = styled.div`
   align-items: center;
 `
 
-export const MenuStyles = {
-  Menu,
-  MainMenu,
+export const NavStyles = {
+  Nav,
+  MainNav,
 }
