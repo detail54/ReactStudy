@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 export interface IProps {
   width?: string
+  height?: string
   color?: string
   background?: string
   fontSize?: string
@@ -9,10 +10,12 @@ export interface IProps {
   align?: string
   margin?: string
   padding?: string
+  alignItems?: string
 }
 
 const Div = styled.div`
-  width: ${(props: IProps) => props.width || '200px'};
+  width: ${(props: IProps) => props.width || '150px'};
+  height: ${(props: IProps) => props.height || '40px'};
   color: ${(props: IProps) => props.color || 'black'};
   background: ${(props: IProps) => props.background || 'white'};
   font-size: ${(props: IProps) => props.fontSize || '0px'};
@@ -37,24 +40,12 @@ const Div = styled.div`
       `)}
 
   ${(props: IProps) =>
-    (props.align === 'left' &&
-      css`
-        display: flex;
-        justify-content: left;
-        align-items: center;
-      `) ||
-    (props.align === 'center' &&
-      css`
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      `) ||
-    (props.align === 'right' &&
-      css`
-        display: flex;
-        justify-content: center;
-        align-items: right;
-      `)}
+    props.align &&
+    css`
+      display: flex;
+      justify-content: ${props.align || 'center'};
+      align-items: ${props.alignItems || 'center'};
+    `}
 `
 
 export const ListItemStyles = {

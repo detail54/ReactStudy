@@ -13,6 +13,7 @@ export interface IProps {
   align?: Align
   margin?: string
   padding?: string
+  alignItems?: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   style?: any // 인라인 스타일 적용을 위한 props. 사용 지양
   item: string
@@ -29,6 +30,7 @@ const listItem: React.FC<IProps> = (props) => {
     align = '',
     margin = '',
     padding = '',
+    alignItems,
     style = {},
     item,
     onClick,
@@ -43,6 +45,7 @@ const listItem: React.FC<IProps> = (props) => {
     align,
     margin,
     padding,
+    alignItems,
     style,
     onClick,
   }
