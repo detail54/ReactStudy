@@ -1,21 +1,21 @@
 import styled, { css } from 'styled-components'
 
 interface IProps {
-  itemWidth?: string
-  itemHeight?: string
-  itemFontColor?: string
-  itemBackground?: string
-  itemFontSize?: string
-  itemFontWeight?: string
-  size?: string
-  align?: string
-  margin?: string
-  padding?: string
-  alignItems?: string
-  itemCursor?: string
-  hoverColor?: string
-  hoverBgColor?: string
-  hoverTextDeco?: string
+  itemWidth?: string | undefined
+  itemHeight?: string | undefined
+  itemFontColor?: string | undefined
+  itemBackground?: string | undefined
+  itemFontSize?: string | undefined
+  itemFontWeight?: string | undefined
+  size?: Size | undefined
+  align?: Align | undefined
+  margin?: string | undefined
+  padding?: string | undefined
+  alignItems?: string | undefined
+  itemCursor?: string | undefined
+  hoverColor?: string | undefined
+  hoverBgColor?: string | undefined
+  hoverTextDeco?: string | undefined
 }
 
 const Div = styled.div`
