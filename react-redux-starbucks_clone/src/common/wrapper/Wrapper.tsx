@@ -12,6 +12,7 @@ const Wrapper: React.FC<IWrapperProps> = (props) => {
     wrapBackground,
     wrapMargin,
     wrapPadding,
+    children,
   } = props
 
   const styleProps = {
@@ -24,7 +25,9 @@ const Wrapper: React.FC<IWrapperProps> = (props) => {
     wrapPadding,
   }
 
-  return <WrapperStyles.Section {...styleProps} />
+  return (
+    <WrapperStyles.Section {...styleProps}>{children}</WrapperStyles.Section>
+  )
 }
 
 export default Wrapper
