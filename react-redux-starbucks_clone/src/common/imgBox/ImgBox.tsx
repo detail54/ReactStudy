@@ -4,26 +4,40 @@ import { ImgBoxStyles } from './ImgBox.styles'
 
 const ImgBox: React.FC<IImgBoxProps> = (props) => {
   const {
-    bgImgUrl,
-    bgImgSize,
-    bgImgPosition,
-    bgImgRepeat,
+    alt,
+    imgUrl,
+    zIndex,
     boxWidth,
     boxHeight,
-    zIndex,
+    boxDisplay,
+    boxJustify,
+    boxAlignItems,
+    boxAlignSelf,
+    boxPosition,
+    boxTop,
+    boxBottom,
+    boxLeft,
+    boxRight,
   } = props
 
   const styleProps = {
-    bgImgUrl,
-    bgImgSize,
-    bgImgPosition,
-    bgImgRepeat,
+    alt,
+    zIndex,
+    imgUrl,
     boxWidth,
     boxHeight,
-    zIndex,
+    boxDisplay,
+    boxJustify,
+    boxAlignItems,
+    boxAlignSelf,
+    boxPosition,
+    boxTop,
+    boxBottom,
+    boxLeft,
+    boxRight,
   }
 
-  return <ImgBoxStyles.Div {...styleProps} />
+  return <ImgBoxStyles.Img {...styleProps} src={imgUrl} alt={alt} />
 }
 
 export default ImgBox
