@@ -49,3 +49,34 @@ export interface IImgBoxProps {
   boxLeft?: string
   boxRight?: string
 }
+
+export interface IButtonProps {
+  btborder?: string
+  btborderRadius?: string
+  btWidth?: string
+  btHeight?: string
+  btFontColor?: string
+  btBackground?: string
+  btFontSize?: string
+  btFontWeight?: string
+  size?: Size
+  align?: Align
+  margin?: string
+  padding?: string
+  alignItems?: string
+  btCursor?: string
+  hoverBorder?: string
+  hoverColor?: string
+  hoverBgColor?: string
+  hoverTextDeco?: string
+  btTransition?: string
+  btPosition?: string
+  btTop?: string
+  btBottom?: string
+  btLeft?: string
+  btRight?: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  style?: any // 인라인 스타일 적용을 위한 props. 사용 지양
+  text?: string
+  onClick?: () => void
+}

@@ -17,7 +17,7 @@ const Imgs = styled.div`
   img:nth-child(1) {
     display: flex;
     align-self: flex-start;
-    margin-top: 78px;
+    margin-top: 36px;
     z-index: 1;
     position: relative;
     left: 345px;
@@ -26,7 +26,7 @@ const Imgs = styled.div`
   img:nth-child(2) {
     position: relative;
     left: -120px;
-    bottom: 137px;
+    bottom: 179px;
   }
 
   img:nth-child(3) {
@@ -35,7 +35,7 @@ const Imgs = styled.div`
     z-index: 1;
     position: relative;
     left: -130px;
-    top: 120px;
+    top: 78px;
   }
 
   img:nth-child(4) {
@@ -43,7 +43,7 @@ const Imgs = styled.div`
     align-self: center;
     position: relative;
     left: -167px;
-    bottom: 46px;
+    bottom: 88px;
   }
 `
 
