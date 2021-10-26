@@ -28,6 +28,7 @@ const Button = styled.div`
     `}
 
   border: ${(props: IButtonProps) => props.btborder || ''};
+  border-radius: ${(props: IButtonProps) => props.btborderRadius || ''};
   width: ${(props: IButtonProps) => props.btWidth || ''};
   height: ${(props: IButtonProps) => props.btHeight || ''};
   color: ${(props: IButtonProps) => props.btFontColor || ''};

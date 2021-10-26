@@ -5,6 +5,7 @@ import { ButtonStyles } from './Button.styles'
 const Button: React.FC<IButtonProps> = (props) => {
   const {
     btborder,
+    btborderRadius,
     btWidth,
     btHeight,
     btFontColor,
@@ -28,6 +29,7 @@ const Button: React.FC<IButtonProps> = (props) => {
 
   const styleProps = {
     btborder,
+    btborderRadius,
     btWidth,
     btHeight,
     btFontColor,
