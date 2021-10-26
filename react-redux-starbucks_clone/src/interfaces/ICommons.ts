@@ -35,5 +35,10 @@ export interface IWrapperProps {
 
 export interface IImgBoxProps {
   bgImgUrl: string
+  bgImgSize?: string
+  bgImgPosition?: Align
+  bgImgRepeat?: string
   zIndex?: number
+  boxWidth?: string
+  boxHeight?: string
 }
