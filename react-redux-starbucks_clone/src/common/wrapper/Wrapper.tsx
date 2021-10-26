@@ -1,6 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React from 'react'
-import { IWrapperProps } from '../../interfaces/ICommon'
+import { IWrapperProps } from '../../interfaces/ICommons'
 import { WrapperStyles } from './Wrapper.styles'
 
 const Wrapper: React.FC<IWrapperProps> = (props) => {

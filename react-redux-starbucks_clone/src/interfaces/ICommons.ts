@@ -32,3 +32,8 @@ export interface IWrapperProps {
   wrapMargin?: string
   wrapPadding?: string
 }
+
+export interface IImgBoxProps {
+  bgImgUrl: string
+  zIndex?: number
+}

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { IWrapperProps } from '../../interfaces/ICommon'
+import { IWrapperProps } from '../../interfaces/ICommons'
 
 const Section = styled.section`
   background-image: url(${(props: IWrapperProps) => props.bgImageUrl || ''});

@@ -1,5 +1,5 @@
 import React from 'react'
-import { IListItemProps } from '../../interfaces/ICommon'
+import { IListItemProps } from '../../interfaces/ICommons'
 import { ListItemStyles } from './ListItem.styles'
 
 const listItem: React.FC<IListItemProps> = (props) => {

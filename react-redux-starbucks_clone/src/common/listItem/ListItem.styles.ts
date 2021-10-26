@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { IListItemProps } from '../../interfaces/ICommon'
+import { IListItemProps } from '../../interfaces/ICommons'
 
 interface IProps {
   itemWidth?: string
