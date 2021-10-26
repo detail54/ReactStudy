@@ -1,20 +1,11 @@
 /* eslint-disable react/require-default-props */
 import React from 'react'
+import { IWrapperProps } from '../../interfaces/ICommon'
 import { WrapperStyles } from './Wrapper.styles'
 
-interface IProps {
-  backgroundImageUrl?: string
-  wrapWidth?: string
-  wrapHeight?: string
-  wrapCursor?: string
-  wrapBackground?: string
-  wrapMargin?: string
-  wrapPadding?: string
-}
-
-const Wrapper: React.FC<IProps> = (props) => {
+const Wrapper: React.FC<IWrapperProps> = (props) => {
   const {
-    backgroundImageUrl,
+    bgImageUrl,
     wrapWidth,
     wrapHeight,
     wrapCursor,
@@ -24,7 +15,7 @@ const Wrapper: React.FC<IProps> = (props) => {
   } = props
 
   const styleProps = {
-    backgroundImageUrl,
+    bgImageUrl,
     wrapWidth,
     wrapHeight,
     wrapCursor,

@@ -1,25 +1,16 @@
 import styled from 'styled-components'
-
-interface IProps {
-  backgroundImageUrl?: string
-  wrapWidth?: string
-  wrapHeight?: string
-  wrapCursor?: string
-  wrapBackground?: string
-  wrapMargin?: string
-  wrapPadding?: string
-}
+import { IWrapperProps } from '../../interfaces/ICommon'
 
 const Section = styled.section`
-  background-image: url(${(props: IProps) => props.backgroundImageUrl || ''});
+  background-image: url(${(props: IWrapperProps) => props.bgImageUrl || ''});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: ${(props: IProps) => props.wrapHeight || ''};
-  width: ${(props: IProps) => props.wrapWidth || ''};
-  cursor: ${(props: IProps) => props.wrapCursor || ''};
-  margin: ${(props: IProps) => props.wrapMargin || ''};
-  padding: ${(props: IProps) => props.wrapPadding || ''};
+  height: ${(props: IWrapperProps) => props.wrapHeight || ''};
+  width: ${(props: IWrapperProps) => props.wrapWidth || ''};
+  cursor: ${(props: IWrapperProps) => props.wrapCursor || ''};
+  margin: ${(props: IWrapperProps) => props.wrapMargin || ''};
+  padding: ${(props: IWrapperProps) => props.wrapPadding || ''};
 `
 
 export const WrapperStyles = {

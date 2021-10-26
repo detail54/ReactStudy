@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { IListItemProps } from '../../interfaces/ICommon'
 
 interface IProps {
   itemWidth?: string
@@ -44,20 +45,20 @@ const Div = styled.div`
       align-items: ${props.alignItems || 'center'};
     `}
 
-  width: ${(props: IProps) => props.itemWidth || ''};
-  height: ${(props: IProps) => props.itemHeight || ''};
-  color: ${(props: IProps) => props.itemFontColor || ''};
-  background: ${(props: IProps) => props.itemBackground || ''};
-  font-size: ${(props: IProps) => props.itemFontSize || ''};
-  font-weight: ${(props: IProps) => props.itemFontWeight || ''};
-  margin: ${(props: IProps) => props.margin || ''};
-  padding: ${(props: IProps) => props.padding || ''};
-  cursor: ${(props: IProps) => props.itemCursor || ''};
+  width: ${(props: IListItemProps) => props.itemWidth || ''};
+  height: ${(props: IListItemProps) => props.itemHeight || ''};
+  color: ${(props: IListItemProps) => props.itemFontColor || ''};
+  background: ${(props: IListItemProps) => props.itemBackground || ''};
+  font-size: ${(props: IListItemProps) => props.itemFontSize || ''};
+  font-weight: ${(props: IListItemProps) => props.itemFontWeight || ''};
+  margin: ${(props: IListItemProps) => props.margin || ''};
+  padding: ${(props: IListItemProps) => props.padding || ''};
+  cursor: ${(props: IListItemProps) => props.itemCursor || ''};
 
   &:hover {
-    color: ${(props: IProps) => props.hoverColor || ''};
-    background: ${(props: IProps) => props.hoverBgColor || ''};
-    text-decoration: ${(props: IProps) => props.hoverTextDeco || ''};
+    color: ${(props: IListItemProps) => props.hoverColor || ''};
+    background: ${(props: IListItemProps) => props.hoverBgColor || ''};
+    text-decoration: ${(props: IListItemProps) => props.hoverTextDeco || ''};
   }
 `
 
