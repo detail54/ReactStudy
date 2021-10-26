@@ -1,26 +1,8 @@
 import styled, { css } from 'styled-components'
 import { IListItemProps } from '../../interfaces/ICommons'
 
-interface IProps {
-  itemWidth?: string
-  itemHeight?: string
-  itemFontColor?: string
-  itemBackground?: string
-  itemFontSize?: string
-  itemFontWeight?: string
-  size?: string
-  align?: string
-  margin?: string
-  padding?: string
-  alignItems?: string
-  itemCursor?: string
-  hoverColor?: string
-  hoverBgColor?: string
-  hoverTextDeco?: string
-}
-
 const Div = styled.div`
-  ${(props: IProps) =>
+  ${(props: IListItemProps) =>
     (props.size === 'small' &&
       css`
         width: 100px;
@@ -37,7 +19,7 @@ const Div = styled.div`
         height: 50px;
       `)}
 
-  ${(props: IProps) =>
+  ${(props: IListItemProps) =>
     props.align &&
     css`
       display: flex;
