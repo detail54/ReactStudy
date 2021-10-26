@@ -34,11 +34,18 @@ export interface IWrapperProps {
 }
 
 export interface IImgBoxProps {
-  bgImgUrl: string
-  bgImgSize?: string
-  bgImgPosition?: Align
-  bgImgRepeat?: string
+  alt: string
+  imgUrl: string
   zIndex?: number
   boxWidth?: string
   boxHeight?: string
+  boxDisplay?: string
+  boxJustify?: string
+  boxAlignItems?: string
+  boxAlignSelf?: string
+  boxPosition?: string
+  boxTop?: string
+  boxBottom?: string
+  boxLeft?: string
+  boxRight?: string
 }
