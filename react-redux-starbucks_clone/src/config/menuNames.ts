@@ -1,6 +1,6 @@
-import * as IMenu from '../interfaces/INav'
+import * as IMenu from '../interfaces/IMenu'
 
-const mainNavNames: IMenu.INavListItem[] = [
+const mainMenuNames: IMenu.IMenuListItem[] = [
   {
     id: 'nav1',
     menuName: 'COFFEE',
@@ -27,7 +27,7 @@ const mainNavNames: IMenu.INavListItem[] = [
   },
 ]
 
-const subNavNames: IMenu.INavListItem[] = [
+const subMenuNames: IMenu.IMenuListItem[] = [
   {
     id: 'subNav1',
     menuName: 'Sign In',
@@ -46,7 +46,7 @@ const subNavNames: IMenu.INavListItem[] = [
   },
 ]
 
-export const navNameList = {
-  mainNavNames,
-  subNavNames,
+export const menuNameList = {
+  mainMenuNames,
+  subMenuNames,
 }

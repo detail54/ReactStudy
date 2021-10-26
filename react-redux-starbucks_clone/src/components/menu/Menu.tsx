@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import NavView from './NavView'
-import { navNameList } from '../../config/navNames'
+import NavView from './MenuView'
+import { menuNameList } from '../../config/menuNames'
 import ListItem from '../../common/listItem/ListItem'
 
-const Nav: React.FC = () => {
+const Menu: React.FC = () => {
   const [searchVisit, setSearchVisit] = useState(false)
   const [searchText, setSearchText] = useState('')
 
@@ -21,7 +21,7 @@ const Nav: React.FC = () => {
     setSearchText(text)
   }
 
-  const mainnNavList = navNameList.mainNavNames.map((nav) => (
+  const mainnNavList = menuNameList.mainMenuNames.map((nav) => (
     <ListItem
       key={nav.id}
       item={nav.menuName}
@@ -37,7 +37,7 @@ const Nav: React.FC = () => {
     />
   ))
 
-  const subNavList = navNameList.subNavNames.map((nav) => (
+  const subNavList = menuNameList.subMenuNames.map((nav) => (
     <ListItem
       key={nav.id}
       item={nav.menuName}
@@ -62,4 +62,4 @@ const Nav: React.FC = () => {
   )
 }
 
-export default Nav
+export default Menu

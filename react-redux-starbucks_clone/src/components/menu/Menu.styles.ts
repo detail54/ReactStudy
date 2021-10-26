@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Nav = styled.header`
+const Menu = styled.header`
   width: 100%;
   height: 123px;
   display: flex;
@@ -14,7 +14,7 @@ const Nav = styled.header`
   background: #f6f5ef;
 `
 
-const NavBox = styled.div`
+const MenuBox = styled.div`
   margin: 0px;
   height: 100%;
   width: 1100px;
@@ -45,14 +45,14 @@ const HeaderRight = styled.div`
   width: 70%;
 `
 
-const MainNav = styled.div`
+const MainMenu = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 `
 
-const SubNav = styled.div`
+const SubMenu = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -88,14 +88,14 @@ const Searchicon = styled.div`
   cursor: pointer;
 `
 
-export const NavStyles = {
-  Nav,
-  NavBox,
+export const MenuStyles = {
+  Menu,
+  MenuBox,
   HeaderLeft,
   LogoBox,
   HeaderRight,
-  MainNav,
-  SubNav,
+  MainMenu,
+  SubMenu,
   SearchBox,
   SearchInput,
   Searchicon,

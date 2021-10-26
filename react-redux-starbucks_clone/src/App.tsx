@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.css'
-import Nav from './components/nav/Nav'
+import Menu from './components/menu/Menu'
 
 const App: React.FC = () => {
   return (
     <>
-      <Nav />
+      <Menu />
     </>
   )
 }
