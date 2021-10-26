@@ -7,8 +7,8 @@ interface IProps {
   itemBackground?: string | undefined
   itemFontSize?: string | undefined
   itemFontWeight?: string | undefined
-  size?: Size | undefined
-  align?: Align | undefined
+  size?: string | undefined
+  align?: string | undefined
   margin?: string | undefined
   padding?: string | undefined
   alignItems?: string | undefined
