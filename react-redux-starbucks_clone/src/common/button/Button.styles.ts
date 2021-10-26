@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { IButtonProps } from '../../interfaces/ICommons'
 
-const Button = styled.button`
+const Button = styled.div`
   ${(props: IButtonProps) =>
     (props.size === 'small' &&
       css`
