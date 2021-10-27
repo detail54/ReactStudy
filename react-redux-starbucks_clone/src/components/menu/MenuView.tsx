@@ -2,15 +2,16 @@ import React from 'react'
 import { MenuStyles } from './Menu.styles'
 
 interface IProps {
-  mainList: JSX.Element[]
-  subNavList: JSX.Element[]
+  mainnMenuList: JSX.Element[]
+  subMenuList: JSX.Element[]
   onChangeSearch: (text: string) => void
   onSearch: () => void
   searchVisit: boolean
 }
 
 const MenuView: React.FC<IProps> = (props) => {
-  const { mainList, subNavList, onChangeSearch, onSearch, searchVisit } = props
+  const { subMenuList, mainnMenuList, onChangeSearch, onSearch, searchVisit } =
+    props
 
   return (
     <MenuStyles.Menu>
@@ -20,7 +21,7 @@ const MenuView: React.FC<IProps> = (props) => {
         </MenuStyles.HeaderLeft>
         <MenuStyles.HeaderRight>
           <MenuStyles.SubMenu>
-            {subNavList}
+            {subMenuList}
             <MenuStyles.SearchBox>
               <MenuStyles.SearchInput
                 placeholder='통합검색'
@@ -30,7 +31,7 @@ const MenuView: React.FC<IProps> = (props) => {
               <MenuStyles.Searchicon onClick={onSearch} />
             </MenuStyles.SearchBox>
           </MenuStyles.SubMenu>
-          <MenuStyles.MainMenu>{mainList}</MenuStyles.MainMenu>
+          <MenuStyles.MainMenu>{mainnMenuList}</MenuStyles.MainMenu>
         </MenuStyles.HeaderRight>
       </MenuStyles.MenuBox>
     </MenuStyles.Menu>

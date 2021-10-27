@@ -12,6 +12,7 @@ const Menu = styled.header`
   left: 0px;
   color: #555555;
   background: #f6f5ef;
+  z-index: 1000;
 `
 
 const MenuBox = styled.div`

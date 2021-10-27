@@ -21,7 +21,7 @@ const Menu: React.FC = () => {
     setSearchText(text)
   }
 
-  const mainnNavList = menuNameList.mainMenuNames.map((nav) => (
+  const mainnMenuList = menuNameList.mainMenuNames.map((nav) => (
     <ListItem
       key={nav.id}
       item={nav.menuName}
@@ -37,7 +37,7 @@ const Menu: React.FC = () => {
     />
   ))
 
-  const subNavList = menuNameList.subMenuNames.map((nav) => (
+  const subMenuList = menuNameList.subMenuNames.map((nav) => (
     <ListItem
       key={nav.id}
       item={nav.menuName}
@@ -51,15 +51,15 @@ const Menu: React.FC = () => {
     />
   ))
 
-  return (
-    <NavView
-      mainList={mainnNavList}
-      subNavList={subNavList}
-      onChangeSearch={onChangeSearch}
-      onSearch={onSearch}
-      searchVisit={searchVisit}
-    />
-  )
+  const viewProps = {
+    mainnMenuList,
+    subMenuList,
+    onChangeSearch,
+    onSearch,
+    searchVisit,
+  }
+
+  return <NavView {...viewProps} />
 }
 
 export default Menu
