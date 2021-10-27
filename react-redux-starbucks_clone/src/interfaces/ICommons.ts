@@ -75,6 +75,7 @@ export interface IButtonProps {
   btBottom?: string
   btLeft?: string
   btRight?: string
+  zIndex?: number
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   style?: any // 인라인 스타일 적용을 위한 props. 사용 지양
   text?: string
