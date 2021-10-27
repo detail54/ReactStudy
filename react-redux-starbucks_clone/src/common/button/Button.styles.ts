@@ -37,13 +37,14 @@ const Button = styled.div`
   font-weight: ${(props: IButtonProps) => props.btFontWeight || ''};
   margin: ${(props: IButtonProps) => props.margin || ''};
   padding: ${(props: IButtonProps) => props.padding || ''};
-  cursor: ${(props: IButtonProps) => props.btCursor || ''};
   transition: ${(props: IButtonProps) => props.btTransition || ''};
   position: ${(props: IButtonProps) => props.btPosition || ''};
   top: ${(props: IButtonProps) => props.btTop || ''};
   bottom: ${(props: IButtonProps) => props.btBottom || ''};
   left: ${(props: IButtonProps) => props.btLeft || ''};
   right: ${(props: IButtonProps) => props.btRight || ''};
+  cursor: ${(props: IButtonProps) => props.btCursor || ''};
+  z-index: ${(props: IButtonProps) => props.zIndex};
 
   &:hover {
     border: ${(props: IButtonProps) => props.hoverBorder || ''};
