@@ -16,20 +16,21 @@ const HomeView: React.FC<IProps> = (props) => {
       <Wrapper bgImageUrl={bgImgUrl} wrapHeight='646px'>
         <Button
           text='자세히 보기'
-          btWidth='125px'
-          btHeight='38px'
+          btWidth='121px'
+          btHeight='34px'
           btFontSize='15px'
           btborder='2px solid #a3a1a1'
           btborderRadius='5px'
           btFontColor='#A3A1A1'
           align='center'
+          btPosition='relative'
+          btTop='227px'
+          btLeft='515px'
           hoverTextDeco='underline'
           hoverBgColor='#a3a1a15d'
-          btCursor='pointer'
           btTransition='.5s'
-          btPosition='relative'
-          btTop='225px'
-          btLeft='515px'
+          btCursor='pointer'
+          zIndex={1}
         />
         <HomeStyles.Imgs>{setImgBox}</HomeStyles.Imgs>
       </Wrapper>

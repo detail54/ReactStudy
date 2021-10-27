@@ -17,22 +17,21 @@ const Imgs = styled.div`
   img:nth-child(1) {
     display: flex;
     align-self: flex-start;
-    margin-top: 36px;
-    z-index: 1;
+    margin-top: 40px;
     position: relative;
     left: 345px;
+    z-index: 1;
   }
 
   img:nth-child(2) {
     position: relative;
     left: -120px;
-    bottom: 179px;
+    bottom: 175px;
   }
 
   img:nth-child(3) {
     display: flex;
     align-self: flex-start;
-    z-index: 1;
     position: relative;
     left: -130px;
     top: 78px;
