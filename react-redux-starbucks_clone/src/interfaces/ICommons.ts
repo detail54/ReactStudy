@@ -25,6 +25,10 @@ export interface IListItemProps {
 
 export interface IWrapperProps {
   bgImageUrl?: string
+  bgColor?: string
+  bgSize?: string
+  bgRepeat?: string
+  bgPosition?: string
   wrapWidth?: string
   wrapHeight?: string
   wrapCursor?: string

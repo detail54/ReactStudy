@@ -6,6 +6,10 @@ import { WrapperStyles } from './Wrapper.styles'
 const Wrapper: React.FC<IWrapperProps> = (props) => {
   const {
     bgImageUrl,
+    bgColor,
+    bgSize,
+    bgRepeat,
+    bgPosition,
     wrapWidth,
     wrapHeight,
     wrapCursor,
@@ -17,6 +21,10 @@ const Wrapper: React.FC<IWrapperProps> = (props) => {
 
   const styleProps = {
     bgImageUrl,
+    bgColor,
+    bgSize,
+    bgRepeat,
+    bgPosition,
     wrapWidth,
     wrapHeight,
     wrapCursor,

@@ -4,16 +4,15 @@ import Wrapper from '../../common/wrapper/Wrapper'
 import { HomeStyles } from './Home.styles'
 
 interface IProps {
-  bgImgUrl: string
   setImgBox: JSX.Element[]
 }
 
 const HomeView: React.FC<IProps> = (props) => {
-  const { bgImgUrl, setImgBox } = props
+  const { setImgBox } = props
 
   return (
     <HomeStyles.Main>
-      <Wrapper bgImageUrl={bgImgUrl} wrapHeight='646px'>
+      <Wrapper bgColor='#d1131d' wrapHeight='646px'>
         <Button
           text='자세히 보기'
           btWidth='121px'
