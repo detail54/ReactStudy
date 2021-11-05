@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Home from '../components/home/Home'
 import Menu from '../components/menu/Menu'
 import { ContainerStyles } from './Container.styles'
@@ -9,7 +9,9 @@ const Main: React.FC = () => {
     <>
       <Menu />
       <ContainerStyles.Main>
-        <Route exact path='/' component={Home} />
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
       </ContainerStyles.Main>
     </>
   )
