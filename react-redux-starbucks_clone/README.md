@@ -4,6 +4,7 @@
 - typescript
 - redux
 - emotion
+- react-router-dom 6.0.0
 
 ## package
 
